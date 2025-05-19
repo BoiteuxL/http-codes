@@ -1,0 +1,38 @@
+{
+  "name": "@loics-utils/http-codes",
+  "version": "1.0.2",
+  "description": "A NPM package that provides type-safe HTTP status codes. ",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -fr ./dist",
+    "build": "npm run clean && tsc",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "prepack": "npm run build",
+    "ci": "npm run build",
+    "prepare": "npm run build",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
+  },
+  "files": ["dist"],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoiteuxL/http-codes.git"
+  },
+  "author": "Loïc Boiteux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BoiteuxL/http-codes/issues"
+  },
+  "homepage": "https://github.com/BoiteuxL/http-codes#readme",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.1",
+    "@eslint/js": "^9.27.0",
+    "@types/node": "^22.15.19",
+    "eslint": "^9.27.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  }
+}
